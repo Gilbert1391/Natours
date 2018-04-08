@@ -1,0 +1,46 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: .2rem;
+    position: absolute;
+    transition: all 200ms;
+    z-index: 1;
+    outline-offset: 2rem;
+
+    &--p1 {
+      top: 0;
+      left: 0;
+    }
+
+    &--p2 {
+      top: 2rem;
+      right: 0;
+    }
+
+    &--p3 {
+      top: 10rem;
+      left: 20%;
+
+    }
+
+   &:hover {
+     outline: 1.5rem solid $color-primay;
+     transform: scale(1.05);
+     box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+     z-index: 2;
+   }
+
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(.95);
+  }
+
+}
+
+// .composition:hover .composition__photo:not(:hover) {
+//   transform: scale(.95);
+// } This select the entire composition when it's hover and also the photo that's not being hover'd

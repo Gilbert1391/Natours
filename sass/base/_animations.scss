@@ -1,0 +1,43 @@
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translatex(-10rem);
+  }
+
+  80% {
+    transform: translatex(10rem);
+  }
+
+   100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translatex(10rem);
+  }
+
+  80% {
+    transform: translatex(-1rem);
+  }
+
+   100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    opacity: 0;
+    transform: translatey(3rem);
+  }
+
+   100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}

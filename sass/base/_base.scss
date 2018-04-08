@@ -1,0 +1,15 @@
+*, *::before, *::after { //must specify pseudo elements such as ::before
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+//converting the root font size to % is a good practice in case the user wish to change the font size, e.g.; sight problems. In this case 62.5% is the same as 10px
+
+body {
+  box-sizing: border-box;
+}
+// it's a better practice to place box-sizing: border-box in the body in case someone want to change this property for X element in the future. Make sure to place box-sizing: inherit; in the * (unervisal) style selector too.

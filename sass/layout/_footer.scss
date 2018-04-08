@@ -1,0 +1,59 @@
+.footer {
+  background-color: $color-gray-dark-2;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+
+  &__logo {
+    width: 10rem;
+  }
+
+  &__logo-box {
+    text-align: center; //img is an inline element (just like text) so you use this to center it
+    margin-bottom: 8rem;
+  }
+
+  &__navigation {
+    border-top: .1rem solid $color-gray;
+    padding-top: 2rem;
+    display: inline-block;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+ &__item {
+   display: inline-block;
+
+   &:not(:last-child) {
+     margin-right: 1.5rem;
+   }
+ }
+
+ &__link {
+   display: inline-block; //This is for hte hover/active animation effec to take place
+   color: $color-gray-light-1;
+
+   &:link, :visited {
+     color: $color-gray-light-1;
+     background-color: $color-gray-dark-2;
+     text-decoration: none;
+     text-transform: uppercase;
+     transition: all 200ms;
+   }
+
+   &:hover, &:active {
+     color: $color-primay;
+     box-shadow: 0 1rem 2rem rgba($color-black, .4);
+     transform: rotate(5deg) scale(1.3);
+   }
+ }
+
+ &__copyright {
+   color: $color-gray-light-1;
+   border-top: .1rem solid $color-gray;
+   padding-top: 2rem;
+   width: 84%;
+   float: right;
+ }
+}
