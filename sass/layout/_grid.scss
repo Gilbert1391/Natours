@@ -2,15 +2,33 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include responsive(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
    }
 
   [class^=col-] {
     float: left;
 
+    @include responsive(tab-port) {
+      width: 100% !important;
+    }
+
      &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
      }
    }
 

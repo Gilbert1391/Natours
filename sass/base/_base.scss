@@ -4,12 +4,35 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
-}
 //converting the root font size to % is a good practice in case the user wish to change the font size, e.g.; sight problems. In this case 62.5% is the same as 10px
+
+html {
+  font-size: 62.5%; //1rem = 10px, 10/16 = 62.5
+
+  // @include content-example {
+  //   font-size: 50%;
+  // } this is just an example for the use of content directive
+
+  @include responsive(tab-land) { //widh < 1200px?
+    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25
+  }
+
+  @include responsive(tab-port) { //widh < 900px?
+    font-size: 50%; //1rem = 8px, 8/16= 50
+  }
+
+  @include responsive(big-desktop) { //widh < 1800px?
+    font-size: 75%; //1rem = 12px, 75
+  }
+}
+
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include responsive(tab-port) {
+    padding: 0;
+  }
 }
 // it's a better practice to place box-sizing: border-box in the body in case someone want to change this property for X element in the future. Make sure to place box-sizing: inherit; in the * (unervisal) style selector too.

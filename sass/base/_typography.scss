@@ -2,7 +2,6 @@ body {
   font-family: lato, sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  padding: 3rem;
   color: $color-gray;
 }
 
@@ -19,6 +18,11 @@ body {
     font-weight: 4rem;
     letter-spacing: 3.5rem;
     animation: left 1s ease-out;
+
+    @include responsive(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -27,6 +31,10 @@ body {
     font-weight: 7rem;
     letter-spacing: 1.75rem;
     animation: right 1s ease-out;
+
+    @include responsive(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -40,6 +48,12 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all 200ms;
+  @include responsive(tab-port) {
+    font-size: 3rem;
+  }
+  @include responsive(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);

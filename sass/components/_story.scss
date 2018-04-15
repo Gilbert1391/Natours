@@ -13,9 +13,15 @@
    transform: skewX(12deg);
   }
 
-  // &__text {
-  //   transform: skewX(12deg);
-  // }
+  @include responsive(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include responsive(phone) {
+    transform: skewX(0);
+  }
 
   &__shape {
     width: 15rem;
@@ -27,6 +33,10 @@
     clip-path: circle(50% at 50% 50%);
     margin-right: 3rem;
     position: relative;
+
+    @include responsive(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
    }
 
    &__img {
@@ -35,6 +45,13 @@
      transform: translateX(-4rem) scale(1.4);
      backface-visibility: hidden;
      transition: all 800ms;
+   }
+
+   &__text {
+
+     @include responsive(phone) {
+       transform: skewX(0);
+     }
    }
 
    &__caption {

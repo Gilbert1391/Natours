@@ -15,6 +15,16 @@
     z-index: 10;
     box-shadow: 0 1rem 3rem rgba($color-black, .2);
     text-align: center;
+
+    @include responsive(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -27,6 +37,16 @@
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 5;
     transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include responsive(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include responsive(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {

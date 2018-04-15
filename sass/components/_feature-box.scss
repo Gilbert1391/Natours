@@ -13,6 +13,9 @@
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent;
+    @include responsive(tab-port) {
+      margin-bottom: 0;
+    }
    }
 
   &:hover {
